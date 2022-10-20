@@ -12,11 +12,11 @@ export default function Home() {
         <h1 className="text-white font-black text-6xl md:text-7xl lg:text-8xl">
           Space Explorer
         </h1>
-        <p className="text-white text-center font-bold px-6 max-w-[28rem] md:max-w-[50vw]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+        <p className="text-white text-center px-6 max-w-[28rem] md:max-w-[50vw] text-md lg:text-lg">
+          Explore endless space with NASA Api.
+          <br />
+          Enter a phrase that interests you and search for planets, stars,
+          galaxies and more.
         </p>
         <BaseSearch />
       </div>
