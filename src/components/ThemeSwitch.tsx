@@ -30,18 +30,18 @@ export default function ThemeSwitch() {
             theme === "light"
               ? "opacity-70 hover:opacity-100 h-auto"
               : "opacity-0 h-0"
-          } transition`}
+          } transition text-basicGray dark:text-white`}
         >
-          <Icon path={mdiWeatherSunny} title="Sun" size={1.3} color="white" />
+          <Icon path={mdiWeatherSunny} title="Sun" size={1.3} />
         </div>
         <div
           className={`${
             theme === "dark"
               ? "opacity-70 hover:opacity-100 h-auto"
               : "opacity-0 h-0"
-          } transition`}
+          } transition text-basicGray dark:text-white`}
         >
-          <Icon path={mdiWeatherNight} title="Moon" size={1.2} color="white" />
+          <Icon path={mdiWeatherNight} title="Moon" size={1.2} />
         </div>
       </div>
     </button>

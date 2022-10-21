@@ -7,7 +7,7 @@ export default function App() {
   const location = useLocation();
 
   let theme = localStorage.getItem("theme");
-  if (theme === "dark") {
+  if (theme === "dark" || !theme) {
     document.documentElement.classList.add("dark");
   }
 

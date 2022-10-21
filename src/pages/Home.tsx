@@ -18,7 +18,7 @@ export default function Home() {
           Enter a phrase that interests you and search for planets, stars,
           galaxies and more.
         </p>
-        <BaseSearch />
+        <BaseSearch onlyLightSearch={true} />
       </div>
     </motion.div>
   );

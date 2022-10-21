@@ -4,7 +4,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        basicGray: "#A1A1AA",
+      },
     },
   },
   plugins: [],

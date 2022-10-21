@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function BaseSearch() {
+interface Props {
+  onlyLightSearch: boolean;
+}
+
+export default function BaseSearch({ onlyLightSearch }: Props) {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const navigate = useNavigate();
 
@@ -24,7 +28,9 @@ export default function BaseSearch() {
       <span className="absolute inset-y-0 left-0 flex items-center pl-2">
         <button
           type="submit"
-          className="p-1 focus:outline-none focus:shadow-outline text-white"
+          className={`p-1 focus:outline-none focus:shadow-outline ${
+            onlyLightSearch ? "text-white" : "text-basicGray"
+          } dark:text-white`}
         >
           <svg
             fill="none"
@@ -46,7 +52,11 @@ export default function BaseSearch() {
         onChange={changeSearchHandler}
         onKeyDown={handleKeyDown}
         value={searchQuery}
-        className="py-2 text-sm text-white bg-white bg-opacity-20 focus:bg-opacity-30 rounded-md pl-10 focus:outline-none placeholder-white transition"
+        className={`py-2 text-sm ${
+          onlyLightSearch
+            ? "text-white bg-white placeholder-white"
+            : "text-basicGray bg-basicGray placeholder-basicGray"
+        } dark:text-white dark:bg-white bg-opacity-20 focus:bg-opacity-30 dark:bg-opacity-20 dark:focus:bg-opacity-30 rounded-md pl-10 focus:outline-none dark:placeholder-white transition`}
         placeholder="Search..."
         autoFocus
       />
