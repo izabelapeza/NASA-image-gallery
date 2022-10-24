@@ -1,3 +1,5 @@
+import PhotoCard from "./PhotoCard";
+
 interface Props {
   photoList: any; // type to do
   openDialog: (currentPhoto: any) => void;
@@ -5,13 +7,14 @@ interface Props {
 
 export default function PhotoList({ photoList, openDialog }: Props) {
   return (
-    <div className="grid grid-cols-1 grid-cols-2 md:grid-cols-3 justify-center justify-items-center gap-6 max-w-[1440px]">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center justify-items-stretch gap-6 max-w-[1440px]">
       {photoList.map((photo: any) => (
-        <div
-          className="h-[200px] w-[100%] bg-center rounded shadow"
-          style={{ backgroundImage: `url(${photo.links[0].href})` }}
+        <PhotoCard
+          imageUrl={photo.links[0].href}
+          title={photo.data[0].title}
+          dateCreated={photo.data[0].date_created}
           key={photo.data[0].nasa_id}
-          onClick={() => {
+          onClickAction={() => {
             openDialog(photo);
           }}
         />
