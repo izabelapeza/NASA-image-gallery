@@ -6,6 +6,10 @@ body {
     background: linear-gradient(90deg, rgb(230, 230, 230) 0%, rgb(240, 240, 240) 35%, rgb(255, 255, 255) 100%);
 }
 
+html {
+    width: 100vw;
+}
+
 .dark body {
     background: linear-gradient(90deg, rgb(18, 15, 19) 0%, rgb(59, 48, 56) 35%, rgb(68, 76, 86) 100%);
 }

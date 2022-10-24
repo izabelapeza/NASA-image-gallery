@@ -15,6 +15,7 @@ export default function BaseSearch({ onlyLightSearch }: Props) {
 
   const handleSearch = () => {
     navigate(`/image-gallery/${searchQuery}`);
+    setSearchQuery("");
   };
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
