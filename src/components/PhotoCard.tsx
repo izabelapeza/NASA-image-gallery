@@ -6,7 +6,7 @@ interface Props {
 
 export default function PhotoCard({ imageUrl, title, dateCreated }: Props) {
   return (
-    <div className="flex cursor-pointer hover:scale-[102%] transition">
+    <div className="flex cursor-pointer hover:scale-[102%] transition w-full">
       <div className="rounded-lg shadow-lg bg-white dark:bg-[#1d181e] w-full">
         <div
           className="h-[200px] w-[100%] bg-center rounded-t"
