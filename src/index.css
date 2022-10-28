@@ -4,9 +4,6 @@
 
 body {
     background: linear-gradient(90deg, rgb(210, 210, 210) 0%, rgb(240, 240, 240) 35%, rgb(255, 255, 255) 100%);
-}
-
-html {
     width: calc(100vw - 10px);
 }
 

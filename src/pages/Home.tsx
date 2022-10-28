@@ -8,7 +8,7 @@ export default function Home() {
       exit={{ translateY: "-105vh" }}
       transition={{ ease: "easeIn", duration: 1.25 }}
     >
-      <div className="bg-[url('./assets/images/milky-way.jpg')] bg-cover bg-center w-full h-[100vh] overflow-hidden flex flex-col justify-center items-center gap-4">
+      <div className="bg-[url('./assets/images/milky-way.jpg')] bg-cover bg-center w-[100vw] h-[100vh] overflow-hidden flex flex-col justify-center items-center gap-4">
         <h1 className="text-white font-black text-6xl md:text-7xl lg:text-8xl">
           Space Explorer
         </h1>
