@@ -3,10 +3,11 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import PhotoList from "../components/PhotoList";
+import { Photo } from "../types/photo";
 import { motion } from "framer-motion";
 
 export default function App() {
-  const [photoList, setPhotoList] = useState<any>(null); // add type
+  const [photoList, setPhotoList] = useState<Photo[] | null>(null); // add type
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const { id } = useParams();

@@ -1,7 +1,8 @@
 import PhotoCard from "./PhotoCard";
+import { Photo } from "../types/photo";
 
 interface Props {
-  photoList: any; // type to do
+  photoList: Photo[];
 }
 
 export default function PhotoList({ photoList }: Props) {
