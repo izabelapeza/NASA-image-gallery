@@ -75,3 +75,27 @@ body {
         background-position: 100% 50%;
     }
 }
+
+.loader-animate {
+    -webkit-animation: LoaderAnimation 3s ease infinite;
+    -moz-animation: LoaderAnimation 3s ease infinite;
+    animation: LoaderAnimation 3s ease infinite;
+  }
+
+.rocket-1 {
+    animation-delay: 0.5s;
+}
+
+.rocket-2 {
+    animation-delay: 1s;
+}
+
+@keyframes LoaderAnimation {
+    0%,
+    100% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 25%
+    }
+}
