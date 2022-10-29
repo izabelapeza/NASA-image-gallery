@@ -2,23 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+/* colors */
+:root {
+    --dark-theme-1: 18, 15, 19;
+    --dark-theme-2: 59, 48, 56;
+    --dark-theme-3: 68, 76, 86;
+    --dark-theme-4: 57, 60, 80;
+    --dark-theme-5: 28, 25, 29;
+    --light-theme-1: 210, 210, 210;
+    --light-theme-2: 240, 240, 240;
+    --light-theme-3: 255, 255, 255;
+    --light-theme-4: 230, 230, 230;
+}
+
+
+/* body */
 body {
-    background: linear-gradient(90deg, rgb(210, 210, 210) 0%, rgb(240, 240, 240) 35%, rgb(255, 255, 255) 100%);
+    background: linear-gradient(90deg, rgb(var(--light-theme-1)) 0%, rgb(var(--light-theme-2)) 35%, rgb(var(--light-theme-3)) 100%);
     width: calc(100vw - 10px);
 }
 
 .dark body {
-    background: linear-gradient(90deg, rgb(18, 15, 19) 0%, rgb(59, 48, 56) 35%, rgb(68, 76, 86) 100%);
+    background: linear-gradient(90deg, rgb(var(--dark-theme-1) )0%, rgb(var(--dark-theme-2) )35%, rgb(var(--dark-theme-3) )100%);
 }
 
+/* navigation */
 .gradient-nav {
-    background: linear-gradient(90deg, rgb(210, 210, 210, 0.9) 0%, rgb(240, 240, 240, 0.9) 35%, rgba(230, 230, 230, 0.9) 100%);
+    background: linear-gradient(90deg, rgba(var(--light-theme-1), 0.9) 0%, rgba(var(--light-theme-2), 0.9) 35%, rgba(var(--light-theme-4), 0.9) 100%);
 }
 
 .dark .gradient-nav {
-    background: linear-gradient(90deg, rgba(18, 15, 19, 0.9) 0%, rgba(59, 48, 56, 0.9) 35%, rgba(57, 60, 80, 0.9) 100%);
+    background: linear-gradient(90deg, rgba(var(--dark-theme-1), 0.9) 0%, rgba(var(--dark-theme-2), 0.9) 35%, rgba(var(--dark-theme-4), 0.9) 100%);
 }
 
+/* scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -32,10 +49,29 @@ body {
 }
 
 .dark ::-webkit-scrollbar-track {
-    background: rgba(18, 15, 19, 0.8);
+    background: rgba(var(--dark-theme-1), 0.8);
 }
 
 .dark ::-webkit-scrollbar-thumb {
-    background: rgba(59, 48, 56, 1);
+    background: rgb(var(--dark-theme-2));
 }
   
+
+/* animation */
+.background-animate {
+    background-size: 400%;
+
+    -webkit-animation: LoadingAnimation 5s ease infinite;
+    -moz-animation: LoadingAnimation 5s ease infinite;
+    animation: LoadingAnimation 5s ease infinite;
+  }
+
+@keyframes LoadingAnimation {
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
