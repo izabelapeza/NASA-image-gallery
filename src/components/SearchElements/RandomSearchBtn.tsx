@@ -35,7 +35,7 @@ export default function RandomSearchBtn() {
       <div>
         <Icon path={mdiLayersSearch} title="Sun" size={1.3} />
       </div>
-      <p className="w-[0px] overflow-hidden w-[0px] group-hover:w-[120px] transition-all flex items-center">
+      <p className="w-[120px] md:w-[0px] overflow-hidden group-hover:w-[120px] transition-all flex items-center">
         Random search
       </p>
     </div>

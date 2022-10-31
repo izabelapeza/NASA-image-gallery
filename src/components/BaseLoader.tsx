@@ -3,7 +3,7 @@ import { mdiRocketLaunch } from "@mdi/js";
 
 export default function BaseLoader() {
   return (
-    <div className="fixed top-0 w-[100%] max-w-[1440px] h-[100vh] flex justify-center items-center">
+    <div className="fixed top-0 left-0 w-[100%] h-[100vh] flex justify-center items-center">
       <div className="flex gap-2 text-[rgb(var(--light-theme-1))] dark:text-[rgb(var(--dark-theme-1))]">
         <Icon
           className="loader-animate"

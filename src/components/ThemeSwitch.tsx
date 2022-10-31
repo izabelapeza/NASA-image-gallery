@@ -24,13 +24,13 @@ export default function ThemeSwitch() {
   };
   return (
     <button onClick={changeTheme}>
-      <div className="max-h-10 overflow-hidden">
+      <div className="max-h-10 overflow-hidden text-basicGray dark:text-white">
         <div
           className={`${
             theme === "light"
               ? "opacity-70 hover:opacity-100 h-auto"
               : "opacity-0 h-0"
-          } transition text-basicGray dark:text-white`}
+          } transition`}
         >
           <Icon path={mdiWeatherSunny} title="Sun" size={1.3} />
         </div>
@@ -39,7 +39,7 @@ export default function ThemeSwitch() {
             theme === "dark"
               ? "opacity-70 hover:opacity-100 h-auto"
               : "opacity-0 h-0"
-          } transition text-basicGray dark:text-white`}
+          } transition`}
         >
           <Icon path={mdiWeatherNight} title="Moon" size={1.2} />
         </div>
