@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import useOnScreen from "../hooks/useOnScreen";
+import useOnScreen from "../../hooks/useOnScreen";
 
 interface Props {
   imageUrl: string;

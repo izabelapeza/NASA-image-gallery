@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import PhotoList from "../components/PhotoList";
+import Navbar from "../components/Layout/Navbar";
+import PhotoList from "../components/PhotoElements/PhotoList";
 import { Photo } from "../types/photo";
 import BaseDialog from "../components/BaseDialog";
 import { AnimatePresence, motion } from "framer-motion";

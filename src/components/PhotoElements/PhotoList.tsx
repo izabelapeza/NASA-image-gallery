@@ -1,5 +1,5 @@
 import PhotoCard from "./PhotoCard";
-import { Photo } from "../types/photo";
+import { Photo } from "../../types/photo";
 
 interface Props {
   photoList: Photo[];

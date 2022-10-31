@@ -1,4 +1,4 @@
-import BaseSearch from "../components/BaseSearch";
+import BaseSearch from "../components/SearchElements/BaseSearch";
 import { motion } from "framer-motion";
 
 export default function Home() {

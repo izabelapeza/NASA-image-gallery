@@ -1,6 +1,6 @@
-import BaseSearch from "./BaseSearch";
-import RandomSearchBtn from "./RandomSearchBtn";
-import ThemeSwitch from "./ThemeSwitch";
+import BaseSearch from "../SearchElements/BaseSearch";
+import RandomSearchBtn from "../SearchElements/RandomSearchBtn";
+import ThemeSwitch from "../ThemeSwitch";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
