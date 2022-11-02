@@ -7,6 +7,7 @@ import { Photo } from "../types/photo";
 import BaseDialog from "../components/BaseDialog";
 import { AnimatePresence, motion } from "framer-motion";
 import BaseLoader from "../components/BaseLoader";
+import NoSearchResultsAlert from "../components/NoSearchResultsAlert";
 
 export default function App() {
   const [photoList, setPhotoList] = useState<Photo[] | null>(null);
@@ -42,11 +43,12 @@ export default function App() {
         <Navbar />
         <main>
           <div className="px-8 py-4 max-w-[1440px] mx-auto">
-            {isLoading ? <BaseLoader /> : <></>}
-            {!isLoading && photoList?.length ? (
+            {isLoading ? (
+              <BaseLoader />
+            ) : photoList?.length ? (
               <PhotoList photoList={photoList} openDialog={openDialog} />
             ) : (
-              <></>
+              <NoSearchResultsAlert />
             )}
           </div>
         </main>
