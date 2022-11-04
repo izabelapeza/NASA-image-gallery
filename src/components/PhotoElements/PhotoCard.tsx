@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import useOnScreen from "../../hooks/useOnScreen";
 
 interface Props {
@@ -10,12 +10,25 @@ interface Props {
 export default function PhotoCard({ imageUrl, title, dateCreated }: Props) {
   const photoRef = useRef<HTMLDivElement>(null);
   const isVisible = useOnScreen(photoRef);
+  const [isVisibleAnimation, setIsVisibleAnimation] = useState(false);
+
+  useEffect(() => {
+    let timer: number;
+    if (isVisible) {
+      timer = setTimeout(() => {
+        setIsVisibleAnimation(true);
+      }, 100);
+    }
+    return () => clearTimeout(timer);
+  }, [isVisible]);
 
   return (
     <div
       className={`flex transition w-full h-full ${
         isVisible ? "cursor-pointer hover:scale-[102%]" : ""
-      }`}
+      } ${
+        isVisibleAnimation ? "scale-100" : "scale-[75%]"
+      } transition duration-500`}
       ref={photoRef}
     >
       <div className="rounded-lg shadow-lg bg-white dark:bg-[rgb(var(--dark-theme-5))] w-full min-h-[312px]">
