@@ -8,11 +8,12 @@ import BaseDialog from "../components/BaseDialog";
 import { AnimatePresence, motion } from "framer-motion";
 import BaseLoader from "../components/BaseLoader";
 import NoSearchResultsAlert from "../components/NoSearchResultsAlert";
+import Footer from "../components/Layout/Footer";
 
 export default function App() {
   const [photoList, setPhotoList] = useState<Photo[] | null>(null);
   const [currentPhoto, setCurrentPhoto] = useState<Photo | null>(null);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const { id } = useParams();
 
@@ -39,9 +40,11 @@ export default function App() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <div>
-        <Navbar />
-        <main>
+      <div className="flex flex-col min-h-[100vh]">
+        <div className="min-h-[52px]">
+          <Navbar />
+        </div>
+        <main className="flex-1">
           <div className="px-8 py-4 max-w-[1440px] mx-auto">
             {isLoading ? (
               <BaseLoader />
@@ -71,6 +74,9 @@ export default function App() {
             <></>
           )}
         </AnimatePresence>
+        <div className="min-h-[52px]">
+          <Footer />
+        </div>
       </div>
     </motion.div>
   );

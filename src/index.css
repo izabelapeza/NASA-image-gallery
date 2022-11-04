@@ -19,7 +19,7 @@
 /* body */
 body {
     background: linear-gradient(90deg, rgb(var(--light-theme-1)) 0%, rgb(var(--light-theme-2)) 35%, rgb(var(--light-theme-3)) 100%);
-    width: calc(100vw - 10px);
+    /* width: calc(100vw - 10px); */
 }
 
 .dark body {
