@@ -29,7 +29,7 @@ export default function Navbar() {
   }, [windowWidth]);
 
   return (
-    <nav className="sticky top-0 z-10">
+    <nav className="fixed w-full top-0 z-10">
       <div
         className={`gradient-nav border-b-[1px] border-black dark:border-white border-opacity-10 dark:border-opacity-10 transition-all ${
           openMenu ? "h-[120px]" : "h-[49px]"
