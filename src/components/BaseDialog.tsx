@@ -1,6 +1,6 @@
 import { useClickOutside } from "../hooks/useClickOutside";
 import { Photo } from "../types/photo";
-import Icon from "@mdi/react";
+import { Icon } from "@mdi/react";
 import { mdiClose } from "@mdi/js";
 import { useEffect } from "react";
 

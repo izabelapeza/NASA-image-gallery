@@ -3,7 +3,7 @@ import RandomSearchBtn from "../SearchElements/RandomSearchBtn";
 import ThemeSwitch from "../ThemeSwitch";
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import Icon from "@mdi/react";
+import { Icon } from "@mdi/react";
 import { mdiMenu, mdiClose } from "@mdi/js";
 import { useEffect, useState } from "react";
 import useWindowWidth from "../../hooks/useWindowWidth";

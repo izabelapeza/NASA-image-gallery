@@ -1,4 +1,4 @@
-import Icon from "@mdi/react";
+import { Icon } from "@mdi/react";
 import { mdiLayersSearch } from "@mdi/js";
 import { useNavigate } from "react-router-dom";
 
